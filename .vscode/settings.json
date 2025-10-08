@@ -1,5 +1,29 @@
 {
-    "files.associations": {
-        "iostream": "cpp"
+  "files.associations": {
+    "iostream": "cpp"
+  },
+  "commentChameleon.customTags": [
+    {
+      "tag": "NEW: ! ",
+      "color": "#ffffff",
+      "backgroundColor": "#ff0000ff",
+      "strikethrough": false,
+      "underline": false,
+      "bold": true,
+      "italic": false,
+      "emoji": "✨",
+      "useEmoji": true
+    },
+    {
+      "tag": "!",
+      "color": "#FFFFFF",
+      "backgroundColor": "#f20707a6",
+      "strikethrough": false,
+      "underline": false,
+      "bold": true,
+      "italic": false,
+      "emoji": "✨",
+      "useEmoji": true
     }
+  ]
 }
