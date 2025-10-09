@@ -1,11 +1,5 @@
 #include <iostream>
 using namespace std;
-string repeatStr(const string &s, int times) {
-    string out;
-    out.reserve(s.size() * max(0, times));
-    for (int i = 0; i < times; ++i) out += s;
-    return out;
-}
 
 int main()
 {
@@ -194,7 +188,14 @@ int main()
     }
     cout << endl;
     
-    //   question 14
+/*!    Question No. 14                                          
+
+                1                                               
+              1 2 1                                             
+            1 2 3 1 2                                           
+          1 2 3 4 1 2 3                                         
+        1 2 3 4 5 1 2 3 4                                       
+*/
 
     for (int i = 0; i < n; i++)
     {
@@ -250,25 +251,65 @@ for (int i = 0; i < n * 2 - 1; i++) {
         }
 
         // Second star (only when not first or last line)
-        if (i > 0 && i < n * 2 - 2)
+        if (i > 0 && i < n*2 - 2) {
             cout << "*";
+        }
 
         cout << endl;
     }
-
     cout << endl;
-
-    
-
-
 
     // question 16 
 
-    for (size_t i = 0; i < n; i++)
+    for (int i = 0; i < n*2; i++)
     {
-        /* code */
+        if (i < n)
+        {
+            for (int j = 0; j <= i; j++)
+            {
+                cout << "* ";
+            }
+        }
+        else
+        {
+            for (int j = 0; j < n*2-i; j++)
+            {
+                cout << "* ";
+            }
+            
+        }
+        if (i < n)
+        {
+            for (int j = 0; j < (n-1-i)*2; j++)
+            {
+                cout << "  ";
+            }
+        }
+        else if (i > n)
+        {
+            for (int j = 0; j < (i-n)*2; j++)
+            {
+                cout << "  "; 
+            } 
+        }
+        if (i < n)
+        {
+            for (int j = 0; j <= i; j++)
+            {
+                cout << "* ";
+            }
+        }
+        else
+        {
+            for (int j = 0; j < n*2-i; j++)
+            {
+                cout << "* ";
+            }
+            
+        }
+
+        cout << endl;
     }
-    
 
     return 0;
 }
